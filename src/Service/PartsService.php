@@ -10,9 +10,13 @@ class PartsService
     {
         $result[] = '{"type":"FeatureCollection","features":[';
 
+        $first = true;
+
         foreach ($this->getParts($connection, $partsParam) as $part)
         {
-            $result[] = $part['geo_json_content'];
+            $result[] = ($first ? '' : ',') . $part['geo_json_content'];
+
+            $first = false;
         }
 
         $result[] = ']}';
