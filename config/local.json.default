@@ -1,0 +1,11 @@
+{
+  "debug": true,
+  "db.options": {
+    "driver": "pdo_mysql",
+    "host": "localhost",
+    "dbname": "ppa",
+    "user": "root",
+    "password": "",
+    "charset": "utf8"
+  }
+}
