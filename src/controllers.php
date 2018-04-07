@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 $app->get('/', function (Request $request) use ($app) {
     return new Response($app['parts']->generateGeoJson($app['db'], $request->get('parts')), 200, [
         'Content-Type' => 'application/json; charset=UTF-8',
+        'Access-Control-Allow-Origin' => '*',
     ]);
 });
 
